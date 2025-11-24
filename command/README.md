@@ -6,6 +6,24 @@
     - **Container Interaction** - Executing commands inside running containers
     - **System Administration** - Monitoring resources and maintaining Docker environments
 
+## Basic syntax
+
+```bash
+docker [OPTIONS] COMMAND [ARG...]
+```
+
+**Components:**
+- `docker` - The Docker CLI client
+- `[OPTIONS]` - Global options that apply to the Docker command
+- `COMMAND` - The specific Docker command to execute (e.g., run, build, ps)
+- `[ARG...]` - Arguments specific to the command
+
+## Environment Variables
+- Dynamic values stored in the operating system
+- Can affect how Docker CLI behaves
+- Provide a way to configure Docker without modifying configuration files or passing command-line options repeatedly.
+`os.environ.get('ENV_NAME')` : Python method used to retrieve environment variable values safely.
+
 ## List of Commands
 
 - [build](build/README.md): Build Docker images from a Dockerfile and build context
