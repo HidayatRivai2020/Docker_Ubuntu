@@ -49,10 +49,11 @@ docker rmi [OPTIONS] IMAGE [IMAGE...]
 
 ## Best Practices
 
-1. **Stop containers first** - Ensure no running containers use the image
-2. **Check dependencies** - Verify removal won't break other images
-3. **Use specific tags** - Be explicit about which version to remove
-4. **Backup important images** - Save critical images before removal
-5. **Regular cleanup** - Remove unused images to free disk space
-6. **Avoid force removal** - Only use `--force` when absolutely necessary
-7. **Monitor disk space** - Check available space after bulk removals
+- **Stop containers first** - Ensure no running containers use the image
+- **Check dependencies** - Verify removal won't break other images
+- **Use specific tags** - Be explicit about which version to remove
+- **Backup important images** - Save critical images before removal
+- **Regular cleanup** - Remove unused images to free disk space
+- **Avoid force removal** - Only use `--force` when absolutely necessary
+- **Monitor disk space** - Check available space after bulk removals
+- **Use image prune** - Prefer `docker image prune` for bulk cleanup

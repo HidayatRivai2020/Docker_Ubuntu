@@ -1,4 +1,4 @@
-# Docker rmi Examples
+# Examples
 
 ## Basic Examples
 
@@ -173,9 +173,9 @@ for repo in $(docker images --format "{{.Repository}}" | sort | uniq); do
 done
 ```
 
-## Real-World Use Cases
+## Common Use Cases
 
-### 1. Development Environment Cleanup
+### Development Environment Cleanup
 ```bash
 # Clean up test and development images
 echo "Cleaning development images..."
@@ -196,7 +196,7 @@ for image in $(docker images --filter "reference=*:latest" --format "{{.Reposito
 done
 ```
 
-### 2. CI/CD Pipeline Cleanup
+### CI/CD Pipeline Cleanup
 ```bash
 # CI/CD cleanup script
 #!/bin/bash
@@ -224,7 +224,7 @@ for tag in $(docker images "$project" --format "{{.Tag}}" | grep -E '^[0-9]+$' |
 done
 ```
 
-### 3. Maintenance and Monitoring
+### Maintenance and Monitoring
 ```bash
 # Weekly maintenance script
 #!/bin/bash

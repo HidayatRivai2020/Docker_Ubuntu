@@ -1,4 +1,4 @@
-# Docker ps Troubleshooting
+# Troubleshooting
 
 ## Common Issues
 

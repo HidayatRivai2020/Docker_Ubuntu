@@ -1,4 +1,4 @@
-# Docker inspect Troubleshooting
+# Troubleshooting
 
 ## Common Issues
 

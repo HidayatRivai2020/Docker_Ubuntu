@@ -63,11 +63,11 @@ docker run → Image Available? → No → Pull Image
 
 ## Best Practices
 
-1. **Use specific image tags** instead of `latest` for reproducibility
-2. **Use `--rm` for temporary containers** to avoid accumulating stopped containers
-3. **Use meaningful names** with `--name` for long-running containers
-4. **Set resource limits** for production containers to prevent resource exhaustion
-5. **Use volumes** for persistent data storage
-6. **Avoid running as root** when possible (use `--user` option)
-7. **Use environment files** for complex configurations
-8. **Implement health checks** for production containers
+- **Use specific image tags** instead of `latest` for reproducibility
+- **Use `--rm` for temporary containers** to avoid accumulating stopped containers
+- **Use meaningful names** with `--name` for long-running containers
+- **Set resource limits** for production containers to prevent resource exhaustion
+- **Use volumes** for persistent data storage
+- **Avoid running as root** when possible (use `--user` option)
+- **Use environment files** for complex configurations
+- **Implement health checks** for production containers

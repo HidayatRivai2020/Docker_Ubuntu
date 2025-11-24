@@ -1,4 +1,4 @@
-# Docker ps Examples
+# Examples
 
 ## Basic Examples
 
@@ -221,9 +221,9 @@ docker ps -a --filter volume=data-volume --format "table {{.Names}}\t{{.Status}}
 docker ps -a --filter "since=$(date -d '1 week ago' '+%Y-%m-%d')"
 ```
 
-## Real-World Use Cases
+## Common Use Cases
 
-### 1. System Health Check
+### System Health Check
 ```bash
 #!/bin/bash
 # Container health monitoring script
@@ -249,7 +249,7 @@ echo "Resource Usage (Top 5 by size):"
 docker ps -s --format "table {{.Names}}\t{{.Size}}" | head -6
 ```
 
-### 2. Environment-Specific Monitoring
+### Environment-Specific Monitoring
 ```bash
 #!/bin/bash
 # Monitor containers by environment
@@ -266,7 +266,7 @@ for env in development staging production; do
 done
 ```
 
-### 3. Port Mapping Overview
+### Port Mapping Overview
 ```bash
 #!/bin/bash
 # Generate port mapping report
@@ -286,7 +286,7 @@ docker ps --format "{{.Ports}}" | \
     sort | uniq -c | sort -nr
 ```
 
-### 4. Container Lifecycle Analysis
+### Container Lifecycle Analysis
 ```bash
 #!/bin/bash
 # Analyze container lifecycle and patterns
@@ -310,7 +310,7 @@ for container in $(docker ps -a --format "{{.Names}}"); do
 done
 ```
 
-### 5. Resource Monitoring Dashboard
+### Resource Monitoring Dashboard
 ```bash
 #!/bin/bash
 # Simple resource monitoring dashboard
@@ -341,7 +341,7 @@ while true; do
 done
 ```
 
-### 6. Automated Container Cleanup
+### Automated Container Cleanup
 ```bash
 #!/bin/bash
 # Automated cleanup of old containers

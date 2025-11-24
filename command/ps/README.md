@@ -65,11 +65,11 @@ docker ps [OPTIONS]
 
 ## Best Practices
 
-1. **Use filters effectively** - Narrow down results with specific filters
-2. **Regular monitoring** - Check container status periodically
-3. **Format for automation** - Use `--format` and `-q` for scripts
-4. **Monitor resource usage** - Use `-s` flag to track storage consumption
-5. **Check all containers** - Use `-a` to see stopped containers
-6. **Combine with other commands** - Pipe output to grep, awk, or other tools
-7. **Use meaningful names** - Name containers for easier identification
-8. **Monitor health status** - Filter by health status for health-checked containers
+- **Use filters effectively** - Narrow down results with specific filters
+- **Regular monitoring** - Check container status periodically
+- **Format for automation** - Use `--format` and `-q` for scripts
+- **Monitor resource usage** - Use `-s` flag to track storage consumption
+- **Check all containers** - Use `-a` to see stopped containers
+- **Combine with other commands** - Pipe output to grep, awk, or other tools
+- **Use meaningful names** - Name containers for easier identification
+- **Monitor health status** - Filter by health status for health-checked containers

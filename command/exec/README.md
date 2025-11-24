@@ -54,10 +54,11 @@ docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 
 ## Best Practices
 
-1. **Use interactive mode** - Combine `-it` flags for shell access
-2. **Specify working directory** - Use `-w` to set appropriate context
-3. **Mind user permissions** - Use `--user` to avoid running as root
-4. **Clean command syntax** - Use proper shell quoting for complex commands
-5. **Exit cleanly** - Always exit interactive sessions properly
-6. **Avoid long-running processes** - Use detached mode for background tasks
-7. **Security conscious** - Limit privileges and avoid `--privileged` when possible
+- **Use interactive mode** - Combine `-it` flags for shell access
+- **Specify working directory** - Use `-w` to set appropriate context
+- **Mind user permissions** - Use `--user` to avoid running as root
+- **Clean command syntax** - Use proper shell quoting for complex commands
+- **Exit cleanly** - Always exit interactive sessions properly
+- **Avoid long-running processes** - Use detached mode for background tasks
+- **Security conscious** - Limit privileges and avoid `--privileged` when possible
+- **Test commands first** - Verify commands work before automation

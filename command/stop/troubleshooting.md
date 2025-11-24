@@ -1,4 +1,4 @@
-# Docker Stop Troubleshooting
+# Troubleshooting
 
 ## Common Issues
 

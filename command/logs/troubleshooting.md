@@ -1,4 +1,4 @@
-# Docker logs Troubleshooting
+# Troubleshooting
 
 ## Common Issues
 

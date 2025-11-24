@@ -1,4 +1,4 @@
-# Docker inspect Examples
+# Examples
 
 ## Basic Examples
 
@@ -152,9 +152,9 @@ echo "Container started at: $start_time"
 docker inspect --format='{{if .State.Health}}{{.State.Health.Status}}{{else}}No health check{{end}}' mycontainer
 ```
 
-## Real-World Use Cases
+## Common Use Cases
 
-### 1. Debugging Network Issues
+### Debugging Network Issues
 ```bash
 #!/bin/bash
 # Network debugging script
@@ -176,7 +176,7 @@ echo "DNS settings:"
 docker inspect --format='{{json .HostConfig.Dns}}' "$container" | jq .
 ```
 
-### 2. Configuration Audit
+### Configuration Audit
 ```bash
 #!/bin/bash
 # Container configuration audit
@@ -199,7 +199,7 @@ echo "  Memory: $(docker inspect --format='{{.HostConfig.Memory}}' "$container")
 echo "  CPU Shares: $(docker inspect --format='{{.HostConfig.CpuShares}}' "$container")"
 ```
 
-### 3. Health Check Monitoring
+### Health Check Monitoring
 ```bash
 #!/bin/bash
 # Health check status monitoring
@@ -218,7 +218,7 @@ for container in $containers; do
 done
 ```
 
-### 4. Resource Usage Report
+### Resource Usage Report
 ```bash
 #!/bin/bash
 # Container resource usage report
@@ -254,7 +254,7 @@ for container in $containers; do
 done
 ```
 
-### 5. Image Analysis
+### Image Analysis
 ```bash
 #!/bin/bash
 # Docker image analysis

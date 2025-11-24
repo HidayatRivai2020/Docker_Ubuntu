@@ -1,4 +1,4 @@
-# Docker Pull Troubleshooting
+# Troubleshooting
 
 ## Common Issues
 

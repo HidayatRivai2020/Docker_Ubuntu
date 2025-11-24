@@ -1,0 +1,36 @@
+# How to Measure Image Size
+-Basic Size Measurement
+    - Check Image Size
+    - Check Specific Image
+    - Custom Format Output
+- Layer-by-Layer Analysis
+    - View Image Layers
+    - Analyze Layer Sizes
+- Using Docker Inspect
+    - Detailed Image Information
+    - Extract Layer Information
+- Advanced Analysis Tools
+    - Dive : Interactive Layer Explorer
+    - docker-slim : Minification and Analysis
+    - container-diff : Image Comparison
+    - docker system df : Disk Usage
+    - skopeo : Registry Inspection
+- Size Comparison Methods
+    - Compare Multiple Images
+    - Compare Base Images
+    - Version Comparison
+- Measuring Size Impact
+    - Measure Dockerfile Changes
+    - Measure Layer Addition
+- Automated Size Monitoring
+    - Size Tracking
+    - Size Alert
+    - Size Report Generator
+- CI/CD Integration
+
+## Best Practices for Measurement
+- Measure Regularly
+- Track Over Time
+- Compare Before/After Changes
+- Set Size Budgets
+- Document Size Changes

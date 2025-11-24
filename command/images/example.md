@@ -1,4 +1,4 @@
-# Docker images Examples
+# Examples
 
 ## Basic Examples
 
@@ -156,9 +156,9 @@ docker rmi $(docker images --filter "dangling=true" -q)
 docker images --filter "dangling=false" --format "{{.Repository}}:{{.Tag}}"
 ```
 
-## Real-World Use Cases
+## Common Use Cases
 
-### 1. Development Environment Management
+### Development Environment Management
 ```bash
 # Check what development images are available
 docker images --filter "reference=*/dev" --filter "reference=*:dev"
@@ -170,7 +170,7 @@ docker images | grep node
 docker images --filter "reference=*:latest"
 ```
 
-### 2. Cleanup and Maintenance
+### Cleanup and Maintenance
 ```bash
 # Find large images consuming disk space
 docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}" | sort -k3 -hr | head -10
@@ -182,7 +182,7 @@ docker images --filter "before=$(date -d '1 month ago' '+%Y-%m-%d')"
 docker images --format "{{.ID}}\t{{.Repository}}:{{.Tag}}" | sort
 ```
 
-### 3. CI/CD Pipeline Integration
+### CI/CD Pipeline Integration
 ```bash
 # List images for specific project
 docker images --filter "label=project=myapp"
@@ -198,7 +198,7 @@ else
 fi
 ```
 
-### 4. Security and Compliance
+### Security and Compliance
 ```bash
 # Find images without specific labels
 docker images --filter "label!=security.scan=passed"

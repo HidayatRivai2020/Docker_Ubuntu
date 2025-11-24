@@ -1,4 +1,4 @@
-# Docker exec Troubleshooting
+# Troubleshooting
 
 ## Common Issues
 

@@ -1,4 +1,4 @@
-# Docker exec Examples
+# Examples
 
 ## Basic Examples
 
@@ -157,9 +157,9 @@ docker exec mycontainer curl -I http://localhost:8080
 docker exec mycontainer nslookup google.com
 ```
 
-## Real-World Use Cases
+## Common Use Cases
 
-### 1. Database Administration
+### Database Administration
 ```bash
 # MySQL administration
 docker exec -it mysql_container mysql -u root -p
@@ -177,7 +177,7 @@ docker exec -i mysql_container mysql -u root -p database_name < backup.sql
 docker exec postgres_container pg_isready
 ```
 
-### 2. Web Server Management
+### Web Server Management
 ```bash
 # Nginx operations
 docker exec nginx_container nginx -t  # Test configuration
@@ -194,7 +194,7 @@ docker exec nginx_container tail -f /var/log/nginx/access.log
 docker exec nginx_container curl -I http://localhost
 ```
 
-### 3. Application Debugging
+### Application Debugging
 ```bash
 # Node.js debugging
 docker exec -it nodejs_app bash
@@ -211,7 +211,7 @@ docker exec java_app jmap -dump:format=b,file=/tmp/heap.hprof <pid>
 docker exec app_container tail -f /app/logs/application.log
 ```
 
-### 4. System Monitoring
+### System Monitoring
 ```bash
 # Resource monitoring
 docker exec mycontainer top
@@ -231,7 +231,7 @@ docker exec mycontainer ss -tlnp
 docker exec mycontainer iftop
 ```
 
-### 5. Security and Maintenance
+### Security and Maintenance
 ```bash
 # Security scanning
 docker exec mycontainer find / -perm -4000 -type f  # Find SUID files

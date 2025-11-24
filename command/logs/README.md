@@ -58,13 +58,11 @@ docker logs [OPTIONS] CONTAINER
 
 ## Best Practices
 
-1. **Use timestamps** - Always include `-t` for debugging and monitoring
-2. **Limit output** - Use `--tail` to avoid overwhelming output
-3. **Follow selectively** - Use `-f` only when actively monitoring
-4. **Filter by time** - Use `--since` and `--until` for specific time ranges
-5. **Monitor resource usage** - Be aware that log following can consume resources
-6. **Combine with grep** - Filter logs with grep for specific patterns
-7. **Use log rotation** - Configure proper log rotation to prevent disk space issues
-8. **Structure application logs** - Use structured logging (JSON) for better parsing
-9. **Monitor log size** - Keep track of log file sizes to prevent storage issues
-10. **Use external logging** - Consider external log aggregation for production systems
+- **Use timestamps** - Always include `-t` for debugging and monitoring
+- **Limit output** - Use `--tail` to avoid overwhelming output
+- **Follow selectively** - Use `-f` only when actively monitoring
+- **Filter by time** - Use `--since` and `--until` for specific time ranges
+- **Monitor resource usage** - Be aware that log following can consume resources
+- **Combine with grep** - Filter logs with grep for specific patterns
+- **Use log rotation** - Configure proper log rotation to prevent disk space issues
+- **Structure application logs** - Use structured logging (JSON) for better parsing

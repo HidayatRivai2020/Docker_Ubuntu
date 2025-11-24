@@ -42,10 +42,11 @@ docker inspect [OPTIONS] NAME|ID [NAME|ID...]
 
 ## Best Practices
 
-1. **Use format templates** - Extract specific information with `--format` option
-2. **Inspect before debugging** - Gather complete information before troubleshooting
-3. **Check state information** - Review status and timestamps for issue diagnosis
-4. **Verify configurations** - Confirm settings match expected values
-5. **Monitor resource usage** - Use size information for capacity planning
-6. **Script with jq** - Process JSON output with jq for automation
-7. **Document configurations** - Use inspect output for environment documentation
+- **Use format templates** - Extract specific information with `--format` option
+- **Inspect before debugging** - Gather complete information before troubleshooting
+- **Check state information** - Review status and timestamps for issue diagnosis
+- **Verify configurations** - Confirm settings match expected values
+- **Monitor resource usage** - Use size information for capacity planning
+- **Script with jq** - Process JSON output with jq for automation
+- **Document configurations** - Use inspect output for environment documentation
+- **Compare configurations** - Use inspect to diff container/image settings

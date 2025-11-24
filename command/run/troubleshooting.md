@@ -1,4 +1,4 @@
-# Docker Run Troubleshooting
+# Troubleshooting
 
 ## Common Issues
 

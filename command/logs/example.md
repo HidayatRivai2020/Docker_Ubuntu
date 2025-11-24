@@ -1,4 +1,4 @@
-# Docker logs Examples
+# Examples
 
 ## Basic Examples
 
@@ -206,9 +206,9 @@ docker logs --tail 50 mycontainer | tail -20
 docker logs mycontainer | grep -i "cpu\|memory\|disk\|network"
 ```
 
-## Real-World Use Cases
+## Common Use Cases
 
-### 1. Application Error Monitoring
+### Application Error Monitoring
 ```bash
 #!/bin/bash
 # Monitor application errors across multiple containers
@@ -241,7 +241,7 @@ done
 wait
 ```
 
-### 2. Log Aggregation Script
+### Log Aggregation Script
 ```bash
 #!/bin/bash
 # Aggregate logs from multiple containers
@@ -277,7 +277,7 @@ echo "Log collection complete. Files saved to: $output_dir"
 ls -la "$output_dir"
 ```
 
-### 3. Performance Analysis
+### Performance Analysis
 ```bash
 #!/bin/bash
 # Analyze container performance from logs
@@ -332,7 +332,7 @@ docker logs --since 1h "$container" | \
     sort | uniq -c | sort -nr | head -10
 ```
 
-### 4. Health Check Monitor
+### Health Check Monitor
 ```bash
 #!/bin/bash
 # Monitor container health through logs
@@ -381,7 +381,7 @@ echo "Recent Container Events:"
 docker system events --since 1h --until now | grep container | tail -10
 ```
 
-### 5. Log Rotation and Cleanup
+### Log Rotation and Cleanup
 ```bash
 #!/bin/bash
 # Log rotation and cleanup script
@@ -442,7 +442,7 @@ find "$backup_dir" -name "*.gz" -mtime +30 -delete
 echo "Log rotation completed"
 ```
 
-### 6. Real-Time Dashboard
+### Real-Time Dashboard
 ```bash
 #!/bin/bash
 # Simple real-time log dashboard

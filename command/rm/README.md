@@ -41,10 +41,11 @@ docker rm [OPTIONS] CONTAINER [CONTAINER...]
 
 ## Best Practices
 
-1. **Stop containers gracefully** before removing (avoid `--force` when possible)
-2. **Use `--volumes`** to clean up anonymous volumes and free disk space
-3. **Backup important data** before removing containers
-4. **Use container names** instead of IDs for better readability
-5. **Remove containers regularly** to prevent disk space accumulation
-6. **Check dependencies** before removing linked containers
-7. **Use `docker container prune`** to remove all stopped containers at once
+- **Stop containers gracefully** before removing (avoid `--force` when possible)
+- **Use `--volumes`** to clean up anonymous volumes and free disk space
+- **Backup important data** before removing containers
+- **Use container names** instead of IDs for better readability
+- **Remove containers regularly** to prevent disk space accumulation
+- **Check dependencies** before removing linked containers
+- **Use `docker container prune`** to remove all stopped containers at once
+- **Verify container is stopped** before attempting removal without force

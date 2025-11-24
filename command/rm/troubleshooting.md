@@ -1,4 +1,4 @@
-# Docker rm Troubleshooting
+# Troubleshooting
 
 ## Common Issues
 

@@ -1,4 +1,4 @@
-# Docker rmi Troubleshooting
+# Troubleshooting
 
 ## Common Issues
 

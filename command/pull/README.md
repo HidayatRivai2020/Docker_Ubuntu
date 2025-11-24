@@ -55,10 +55,11 @@ docker pull [OPTIONS] NAME[:TAG|@DIGEST]
 
 ## Best Practices
 
-1. **Use specific tags** - Avoid `:latest` for production deployments
-2. **Verify image sources** - Only pull from trusted registries
-3. **Keep images updated** - Regularly pull security updates
-4. **Check image sizes** - Monitor bandwidth and storage usage
-5. **Use multi-stage builds** - Minimize image sizes
-6. **Enable content trust** - Verify image signatures when possible
-7. **Cache efficiently** - Leverage layer caching for faster pulls
+- **Use specific tags** - Avoid `:latest` for production deployments
+- **Verify image sources** - Only pull from trusted registries
+- **Keep images updated** - Regularly pull security updates
+- **Check image sizes** - Monitor bandwidth and storage usage
+- **Use multi-stage builds** - Minimize image sizes
+- **Enable content trust** - Verify image signatures when possible
+- **Cache efficiently** - Leverage layer caching for faster pulls
+- **Authenticate properly** - Login to private registries before pulling

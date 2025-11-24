@@ -1,4 +1,4 @@
-# Docker Images Troubleshooting
+# Troubleshooting
 
 ## Common Issues
 

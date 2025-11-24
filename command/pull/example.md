@@ -1,4 +1,4 @@
-# Docker pull Examples
+# Examples
 
 ## Basic Examples
 
@@ -137,9 +137,9 @@ for image in "${images[@]}"; do
 done
 ```
 
-## Real-World Use Cases
+## Common Use Cases
 
-### 1. Development Environment Setup
+### Development Environment Setup
 ```bash
 #!/bin/bash
 # Development environment image pull script
@@ -162,7 +162,7 @@ docker pull traefik:latest
 echo "Development images ready"
 ```
 
-### 2. CI/CD Pipeline Preparation
+### CI/CD Pipeline Preparation
 ```bash
 #!/bin/bash
 # CI/CD pipeline image preparation
@@ -189,7 +189,7 @@ docker pull postman/newman
 echo "CI/CD preparation completed"
 ```
 
-### 3. Production Deployment
+### Production Deployment
 ```bash
 #!/bin/bash
 # Production deployment image pull
@@ -222,7 +222,7 @@ docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}\t{{.CreatedAt
 echo "Production images ready for deployment"
 ```
 
-### 4. Automated Update Script
+### Automated Update Script
 ```bash
 #!/bin/bash
 # Automated image update script

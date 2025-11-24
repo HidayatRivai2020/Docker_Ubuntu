@@ -54,10 +54,11 @@ docker images [OPTIONS] [REPOSITORY[:TAG]]
 
 ## Best Practices
 
-1. **Regular cleanup** - Remove unused images to free disk space
-2. **Use specific tags** - Avoid relying on 'latest' tag for production
-3. **Monitor image sizes** - Keep track of large images that consume disk space
-4. **Filter effectively** - Use filters to find specific images quickly
-5. **Check for updates** - Regularly check for newer image versions
-6. **Remove dangling images** - Clean up <none>:<none> images periodically
-7. **Use multi-stage builds** - Reduce final image sizes in Dockerfiles
+- **Regular cleanup** - Remove unused images to free disk space
+- **Use specific tags** - Avoid relying on 'latest' tag for production
+- **Monitor image sizes** - Keep track of large images that consume disk space
+- **Filter effectively** - Use filters to find specific images quickly
+- **Check for updates** - Regularly check for newer image versions
+- **Remove dangling images** - Clean up <none>:<none> images periodically
+- **Use multi-stage builds** - Reduce final image sizes in Dockerfiles
+- **Document image inventory** - Maintain list of required images for projects

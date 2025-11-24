@@ -1,4 +1,4 @@
-# Docker rm Examples
+# Examples
 
 ## Basic Examples
 
@@ -110,9 +110,9 @@ else
 fi
 ```
 
-## Real-World Use Cases
+## Common Use Cases
 
-### 1. Development Workflow
+### Development Workflow
 ```bash
 # Clean up test containers after development
 docker stop test-db test-web test-cache
@@ -122,7 +122,7 @@ docker rm -v test-db test-web test-cache
 docker rm -f -v test-db test-web test-cache
 ```
 
-### 2. CI/CD Pipeline Cleanup
+### CI/CD Pipeline Cleanup
 ```bash
 # Remove build containers after CI job
 docker rm $(docker ps -aq --filter label=ci-job=build-123)
@@ -131,7 +131,7 @@ docker rm $(docker ps -aq --filter label=ci-job=build-123)
 docker container prune -f
 ```
 
-### 3. Maintenance Tasks
+### Maintenance Tasks
 ```bash
 # Weekly cleanup of stopped containers
 docker rm $(docker ps -aq --filter status=exited --filter status=dead)
@@ -140,7 +140,7 @@ docker rm $(docker ps -aq --filter status=exited --filter status=dead)
 docker rm $(docker ps -aq --filter exited=1)
 ```
 
-### 4. Emergency Cleanup
+### Emergency Cleanup
 ```bash
 # Free up disk space quickly
 docker container prune -f
