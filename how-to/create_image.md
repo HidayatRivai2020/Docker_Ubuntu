@@ -472,13 +472,3 @@ docker push username/my-nodejs-app:1.0.0
 docker push username/my-nodejs-app:latest
 ```
 
-## Next Steps
-
-After creating your image:
-
-1. **Test thoroughly**: Run in different environments
-2. **Document**: Create README with usage instructions
-3. **Automate**: Set up CI/CD pipeline
-4. **Monitor size**: Track image size over time
-5. **Update regularly**: Keep base images updated
-6. **Deploy**: Push to production environment

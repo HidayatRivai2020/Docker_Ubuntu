@@ -670,14 +670,3 @@ docker port myapp
 8. **Monitor metrics**: Track performance and errors
 9. **Automate deployments**: Use CI/CD pipelines
 10. **Document deployment process**: Maintain runbooks
-
-## Next Steps
-
-After deploying your image:
-
-1. **Monitor**: Set up monitoring and alerting
-2. **Scale**: Add more replicas if needed
-3. **Backup**: Configure data backups
-4. **Update**: Establish update procedures
-5. **Optimize**: Monitor and improve performance
-6. **Document**: Keep deployment documentation current

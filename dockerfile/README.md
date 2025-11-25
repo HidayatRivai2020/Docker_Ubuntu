@@ -361,29 +361,3 @@ FROM node:18-alpine AS builder
 FROM node:18-alpine
 COPY --from=builder /app/dist .
 ```
-
-## Additional Resources
-
-### Dockerfile Reference
-- [Official Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
-- [Docker Best Practices](https://docs.docker.com/develop/dev-best-practices/)
-
-### Tools
-- **hadolint**: Dockerfile linter
-- **dive**: Image layer analyzer
-- **docker-slim**: Image optimization tool
-
-### Example Repositories
-- Look for `Dockerfile` in open-source projects on GitHub
-- Check official Docker images on Docker Hub
-
-## Next Steps
-
-After creating your Dockerfile:
-
-1. **Build the image**: `docker build -t myapp:1.0 .`
-2. **Test locally**: `docker run --rm -it myapp:1.0`
-3. **Optimize**: Use multi-stage builds, minimize layers
-4. **Scan for vulnerabilities**: `docker scan myapp:1.0`
-5. **Push to registry**: `docker push myregistry.com/myapp:1.0`
-6. **Document**: Add README with build and run instructions
