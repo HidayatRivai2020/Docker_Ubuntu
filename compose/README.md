@@ -32,7 +32,13 @@ volumes:        # Define volumes (optional)
   volume_name:
 ```
 
-## Environment Variables
+## [Examples](examples.md)
+- Web Application Stack with database and caching
+- Microservices Architecture with multiple services
+- Development Environment with hot-reload
+- Complete examples with networks and volumes
+
+## [Environment Variables](environment_variables.md)
 - Create `.env` file for storing configuration and secrets
 - Use `${VARIABLE:-default}` syntax for defaults in docker-compose.yml
 - Specify custom env file with `--env-file` flag
@@ -44,6 +50,20 @@ volumes:        # Define volumes (optional)
 - **Environment Files**: Store secrets in `.env` files (add to `.gitignore`)
 - **Network Segmentation**: Use multiple networks for service isolation
 - **Health Checks**: Define health checks for critical services
+
+## [Common Commands](common_commands.md)
+- Starting and stopping services
+- Viewing service status and logs
+- Managing and scaling services
+- Building and updating images
+- Executing commands in containers
+
+## [Troubleshooting](troubleshooting.md)
+- Common issues and solutions
+- Debugging service startup problems
+- Network and volume issues
+- Permission problems
+- Container health checks
 
 ## Migration from docker-compose v1
 

@@ -16,20 +16,87 @@
 - Define Startup Command
 
 ## [Dockerfile Instructions](instruction.md)
-- FROM : Specifies the base image to build upon
-- RUN : Executes commands during image build
-- COPY : Copies files from build context to image
-- ADD : Similar to COPY with additional features (URL support, auto-extraction)
-- WORKDIR : Sets the working directory for subsequent instructions
-- ENV : Sets environment variables
-- ARG : Defines build-time variables
-- LABEL : Adds metadata to image
-- EXPOSE : Declares which ports the container listens on
-- VOLUME : Creates mount points for external volumes
-- USER : Sets the user for running subsequent instructions
-- CMD : Specifies the default command to run when container starts
-- ENTRYPOINT : Configures container to run as an executable
-- HEALTHCHECK : Defines how to test if container is healthy
+- **FROM**: Specifies the base image to build upon
+- **RUN**: Executes commands during image build
+- **COPY**: Copies files from build context to image
+- **ADD**: Similar to COPY with additional features (URL support, auto-extraction)
+- **WORKDIR**: Sets the working directory for subsequent instructions
+- **ENV**: Sets environment variables
+- **ARG**: Defines build-time variables
+- **LABEL**: Adds metadata to image
+- **EXPOSE**: Declares which ports the container listens on
+- **VOLUME**: Creates mount points for external volumes
+- **USER**: Sets the user for running subsequent instructions
+- **CMD**: Specifies the default command to run when container starts
+- **ENTRYPOINT**: Configures container to run as an executable
+- **HEALTHCHECK**: Defines how to test if container is healthy
+
+## Example Dockerfiles
+
+### 1. Simple Web Application
+```dockerfile
+FROM nginx:alpine
+
+COPY index.html /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+### 2. Node.js Application
+```dockerfile
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install --production
+
+COPY . .
+
+EXPOSE 3000
+
+USER node
+
+CMD ["node", "server.js"]
+```
+
+### 3. Python Application
+```dockerfile
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 8000
+
+CMD ["python", "app.py"]
+```
+
+### 4. Multi-Stage Build
+```dockerfile
+# Build stage
+FROM node:18 AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+# Production stage
+FROM node:18-alpine
+WORKDIR /app
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/node_modules ./node_modules
+EXPOSE 3000
+CMD ["node", "dist/main.js"]
+```
 
 ### 5. Database with Initialization
 ```dockerfile

@@ -34,6 +34,7 @@ docker [OPTIONS] COMMAND [ARG...]
 - [login](login/README.md): Authenticate Docker client with a registry server
 - [logs](logs/README.md): Display and follow container logs for debugging and monitoring
 - [manifest](manifest/README.md): Create and manage Docker image manifests and manifest lists
+- [network](network/README.md): Manage Docker networks for container communication
 - [ps](ps/README.md): List Docker containers with their status and configuration
 - [pull](pull/README.md): Download Docker images from a registry to local system
 - [push](push/README.md): Upload Docker images from local system to a remote registry
